@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./Counter.css";
 import Button from "./Button";
+import Label from './Label';
 
 class Counter extends Component {
   constructor(props) {
@@ -37,7 +38,7 @@ class Counter extends Component {
     const { user } = this.props;
     return (
       <div id="main-counter">
-        <div>{user.toUpperCase()}</div>
+        <Label user={user}/>
         <Button onClickHandler={this.decrement}>-</Button>
         {this.state.count}
         <Button onClickHandler={this.increment}>+</Button>
