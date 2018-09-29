@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Counter.css";
+import Button from "./Button";
 
 class Counter extends Component {
   constructor(props) {
@@ -37,9 +38,9 @@ class Counter extends Component {
     return (
       <div id="main-counter">
         <div>{user.toUpperCase()}</div>
-        <button onClick={this.decrement}>-</button>
+        <Button onClickHandler={this.decrement}>-</Button>
         {this.state.count}
-        <button onClick={this.increment}>+</button>
+        <Button onClickHandler={this.increment}>+</Button>
       </div>
     );
   }
