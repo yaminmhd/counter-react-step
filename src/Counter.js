@@ -6,7 +6,7 @@ class Counter extends Component {
     super(props);
 
     this.state = {
-      count: this.props.initialScore
+      count: 0
     };
 
     this.increment = this.increment.bind(this);
@@ -36,7 +36,7 @@ class Counter extends Component {
     const { user } = this.props;
     return (
       <div id="main-counter">
-        <div>Player: {user}</div>
+        <div>{user.toUpperCase()}</div>
         <button onClick={this.decrement}>-</button>
         {this.state.count}
         <button onClick={this.increment}>+</button>
